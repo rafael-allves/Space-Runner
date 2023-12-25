@@ -1,23 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMove : MonoBehaviour
+namespace Player
 {
-    private Player player;
-    
-    private void Start()
+    public class PlayerMove : MonoBehaviour
     {
-        player = GetComponent<Player>();
-    }
+        private StateManager _player;
+        
+        private void Start()
+        {
+            _player = GetComponent<StateManager>();
+        }
     
-    private void Update()
-    {
-        MovePlayer();
-    }
+        private void Update()
+        {
+            MovePlayer();
+        }
 
-    private void MovePlayer()
-    {
-        transform.Translate(Vector3.forward * Time.deltaTime * player.playerSpeed, Space.World);
+        private void MovePlayer()
+        {
+            transform.Translate(Vector3.forward * Time.deltaTime * _player.playerSpeed, Space.World);
+        }
     }
 }

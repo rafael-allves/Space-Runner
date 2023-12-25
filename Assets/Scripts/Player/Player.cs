@@ -1,13 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-/**
- * this class should be responsable for game state and some game logic
- * things like playerSpeed
- */
-public class Player : MonoBehaviour
+namespace Player
 {
-    public float playerSpeed = 5f;
+    /**
+     * this class should be responsible for game state and some game logic
+    * things like playerSpeed
+    */
+    public class StateManager : MonoBehaviour
+    {
+        public float playerSpeed = 5f;
  
+    }
+   
 }
