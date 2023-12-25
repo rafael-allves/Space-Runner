@@ -2,6 +2,9 @@ using UnityEngine;
 
 namespace Player
 {
+    /**
+     * this class has the responsability to manage the player Movements
+     */
     public class PlayerMove : MonoBehaviour
     {
         private StateManager _player;
